@@ -1,2 +1,2 @@
-# config
-A universal configuration repository holding all my special config files
+# Dotfiles
+A universal dotfile configuration repository holding all my special dotfiles
