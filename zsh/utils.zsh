@@ -13,17 +13,19 @@ function ssh-key-info {
 
 ### Tools
 # Xcode via @orta
-openx(){ 
-  if test -n "$(find . -maxdepth 2 -name '*.xcworkspace' -print -quit)"
+openx(){
+  workspace="$(find . -maxdepth 2 -name '*.xcworkspace' -print -quit)"
+  if test -n workspace
   then
     echo "Opening workspace"
-    open *.xcworkspace
+    open "$workspace"
     return
   else
-    if test -n "$(find . -maxdepth 2 -name '*.xcodeproj' -print -quit)"
+    project="$(find . -maxdepth 2 -name '*.xcodeproj' -print -quit)"
+    if test -n project
     then
       echo "Opening project"
-      open *.xcodeproj
+      open "$project"
       return  
     else
       echo "Nothing found"
