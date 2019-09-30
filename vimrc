@@ -4,12 +4,13 @@ call plug#begin('~/.vim/plugged')
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install -all' }
+Plug 'junegunn/fzf.vim'
 
 " Project file tree
 Plug 'scrooloose/nerdtree'
 
 " Polygot syntax highlighting
-Plug 'sheerun/vom-polygot'
+Plug 'sheerun/vim-polyglot'
 
 " Vim prettier support
 Plug 'prettier/vim-prettier'
