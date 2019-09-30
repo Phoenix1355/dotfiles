@@ -59,3 +59,13 @@ function diff {
     -l
   return ${pipestatus[1]}
 }
+
+# Create directory and enter
+function mkd() {
+  mkdir -p "$@" && cd "$_";
+}
+
+# Prints result of 10 shell loads for testing load speed
+function zshspeedtest() {
+  for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done;
+}

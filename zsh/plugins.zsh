@@ -11,8 +11,6 @@ plugins=(
   sudo
   bundler
   dotenv
-  command-not-found
+  zsh-autosuggestions
+  fast-syntax-highlighting
 )
-
-zgem bundle 'https://github.com/zsh-users/zsh-autosuggestions.git'
-zgem bundle 'https://github.com/zdharma/fast-syntax-highlighting.git'

@@ -1,8 +1,5 @@
 ## Exports
 
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/christian/.oh-my-zsh"
-
 # Android SDK Environment Variables
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator

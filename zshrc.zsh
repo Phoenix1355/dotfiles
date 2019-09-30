@@ -2,23 +2,27 @@
 #    ZSH Configuration Core    #
 ################################
 
-### Setup zgem
-# Load zgem dependency manager
-export ZGEM_HOME="$HOME/.zgem"
-if [ ! -e "$ZGEM_HOME" ]; then git clone 'https://github.com/qoomon/zgem.git' "$ZGEM_HOME"; fi
-source "$ZGEM_HOME/zgem.zsh" # && ZGEM_VERBOSE='true'
+# Profiler
+# zmodload zsh/zprof
 
-### Config
-export ZCONFIG_HOME=$(dirname $(readlink $HOME/.zshrc))
-export ZCONFIG_UPDATE_COMMAND='zgem upgrade'
-zgem bundle "$ZCONFIG_HOME/zsh/zconfig.zsh"
+### Initial
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 
-### Modules
-zgem bundle "$ZCONFIG_HOME/zsh/general.zsh"
-zgem bundle "$ZCONFIG_HOME/zsh/aliases.zsh"
-zgem bundle "$ZCONFIG_HOME/zsh/exports.zsh"
+### Load modules
+ZSH_CONFIG_DIR="$(dirname $(readlink $HOME/.zshrc))/zsh"
 
-zgem bundle "$ZCONFIG_HOME/zsh/plugins.zsh"
-zgem bundle "$ZCONFIG_HOME/zsh/utils.zsh"
+[ -z "$PS1" ] && return
 
+. $ZSH_CONFIG_DIR/general.zsh
+. $ZSH_CONFIG_DIR/aliases.zsh
+. $ZSH_CONFIG_DIR/exports.zsh
+
+. $ZSH_CONFIG_DIR/plugins.zsh
+. $ZSH_CONFIG_DIR/utils.zsh
+
+### Final source
 source "$ZSH/oh-my-zsh.sh"
+
+# End profiler
+# zprof
