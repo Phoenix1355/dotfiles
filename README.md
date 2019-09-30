@@ -30,7 +30,7 @@ Aliases:
 Functions:
 
 * `openx` - Opens Xcode workspace or project in current directory
-* `weather` - Prints todays weather using [wttr.in](wttr.in)
+* `weather [<location>]` - Prints todays weather using [wttr.in](wttr.in). Try `weather Moon`
 * `random [<length>]` - Generates a random character set. Useful for generating passwords
 * `diff <file1> <file2>` - Prints the difference between the to given files
 * `mkd <dir>` - Create a directory and `cd` into it
