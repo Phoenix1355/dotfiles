@@ -21,10 +21,23 @@ Plug 'dense-analysis/ale'
 " Coc.nvim intellisense
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
+" OneDarkPro Theme
+Plug 'joshdick/onedark.vim'
+
 " Initialize plugin system
 call plug#end()
 
 " --- Settings ---
+
+" Color theme
+syntax enable
+set number
+colorscheme onedark
+
+" Js config
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
+let g:vim_jsx_pretty_colorful_config = 1
 
 " let g:ale_fixers['javascript'] = ['eslint']
 
