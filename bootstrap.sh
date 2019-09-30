@@ -28,7 +28,7 @@ ln -s $DOTFILES_DIR/zshrc.zsh ~/.zshrc
 ###################
 ##     UTILS     ##
 ###################
-brew install coreutils wget curl tree git openssl gcc python pngquant rename
+brew install coreutils wget curl tree git openssl gcc python pngquant rename fzf
 
 ###################
 ##     TOOLS     ##
