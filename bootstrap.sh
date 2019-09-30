@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+### THIS IS NOT FINISHED!!
+
 # Bootstrapping file for setting up a development environment on your UNIX 
 # system. Mainly tested for MacOS.
 
-DOTFILES_DIR="$HOME/Projects/dotfiles"
+DOTFILES_DIR="$HOME/.dotfiles"
 
 ###################
 ##     SETUP     ##
