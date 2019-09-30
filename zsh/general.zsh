@@ -12,6 +12,8 @@ WORDCHARS='' # threat every special charater as word delimiter
 # bindkey -e # -e emacs mode -v for vi mode
 bindkey '^[^[[D' backward-word # alt + left
 bindkey '^[^[[C' forward-word  # alt + rigth
+bindkey '^[begin' beginning-of-line
+bindkey '^[end' end-of-line
 
 # Enable math functions e.g. (( f = sin(0.3) ))
 zmodload zsh/mathfunc
