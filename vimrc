@@ -39,7 +39,10 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 let g:vim_jsx_pretty_colorful_config = 1
 
-" let g:ale_fixers['javascript'] = ['eslint']
+let g:ale_fixers = {
+\ '*': ['prettier'],
+\ 'javascript': ['eslint'],
+\}
 
 " Fix files automatically on save
 let g:ale_fix_on_save = 1
