@@ -7,6 +7,9 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# Dotnet SDK
+# export MSBuildSDKsPath=/usr/local/share/dotnet/sdk/3.0.100/Sdks
+
 # Java SDKman
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/christian/.sdkman"

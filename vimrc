@@ -24,6 +24,9 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " OneDarkPro Theme
 Plug 'joshdick/onedark.vim'
 
+" Tester for running unit tests
+Plug 'janko/vim-test'
+
 " Initialize plugin system
 call plug#end()
 
@@ -40,8 +43,7 @@ let g:javascript_plugin_flow = 1
 let g:vim_jsx_pretty_colorful_config = 1
 
 let g:ale_fixers = {
-\ '*': ['prettier'],
-\ 'javascript': ['eslint'],
+\ 'javascript': ['prettier', 'eslint'],
 \}
 
 " Fix files automatically on save
