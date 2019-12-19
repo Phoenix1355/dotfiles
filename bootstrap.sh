@@ -20,7 +20,11 @@ brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 ## Oh-my-zsh - Plugins
-git clone https://github.com/
+git clone https://github.com/zdharma/fast-syntax-highlighting.git \
+  ~ZSH_CUSTOM/plugins/fast-syntax-highlighting
+
+git clone https://github.com/zsh-users/zsh-autosuggestions \
+  ~ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 ## Oh-my-zsh - Linking config
 ln -s $DOTFILES_DIR/zshrc.zsh ~/.zshrc
