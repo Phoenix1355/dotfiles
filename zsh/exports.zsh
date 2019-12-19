@@ -10,6 +10,11 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Dotnet SDK
 # export MSBuildSDKsPath=/usr/local/share/dotnet/sdk/3.0.100/Sdks
 
+# Golang development
+export GOPATH=${HOME}/.go
+export GOROOT=${brew --prefix golang}/libexec
+export PATH=$PATH:${GOPATH}/bin:${GOROOT}/bin
+
 # Java SDKman
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/christian/.sdkman"
