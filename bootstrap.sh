@@ -29,10 +29,13 @@ git clone https://github.com/zsh-users/zsh-autosuggestions \
 ## Oh-my-zsh - Linking config
 ln -s $DOTFILES_DIR/zshrc.zsh ~/.zshrc
 
+## Silence last login
+touch ~/.hushlogin
+
 ###################
 ##     UTILS     ##
 ###################
-brew install coreutils wget curl tree git openssl gcc python pngquant rename fzf
+brew install coreutils wget curl tree git openssl node gcc python pngquant rename fzf
 
 ###################
 ##     TOOLS     ##
