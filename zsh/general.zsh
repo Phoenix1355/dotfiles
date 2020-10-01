@@ -28,4 +28,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
+DEFAULT_USER=`whoami`
+
 source $ZSH/oh-my-zsh.sh
