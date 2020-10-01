@@ -19,3 +19,8 @@ export PATH=$PATH:${GOPATH}/bin:${GOROOT}/bin
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/christian/.sdkman"
 [[ -s "/Users/christian/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/christian/.sdkman/bin/sdkman-init.sh"
+
+# ESP
+export PATH=$HOME/.esp/xtensa-esp32-elf/bin:$PATH
+export ADF_PATH=$HOME/.esp/esp-adf
+export IDF_PATH=$ADF_PATH/esp-idf
