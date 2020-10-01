@@ -7,10 +7,13 @@
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  git-flow
+  brew
   osx
   sudo
   bundler
   dotenv
   zsh-autosuggestions
   fast-syntax-highlighting
+  kubectl
 )
