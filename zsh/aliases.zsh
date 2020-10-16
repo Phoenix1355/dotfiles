@@ -20,6 +20,9 @@ alias rmdir="rm -rf"
 alias dotwatch="dotnet watch run"
 alias dotrun="dotnet run"
 
+# List all TCP processes
+alias tcplist="lsof -i -P -n | grep LISTEN"
+
 ### FUN
 alias please="sudo"
 

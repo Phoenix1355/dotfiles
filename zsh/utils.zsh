@@ -45,9 +45,25 @@ function weather {
 
 # Random
 function random {
-  local character_count=${1:-32}
-  local character_set=${2:-'A-Za-z0-9!#$%&()*+,-./:;<=>?@[]^_`{|}~'}
-  head /dev/urandom | LC_ALL=C tr -dc ${character_set} | fold -w ${character_count} | head -1
+  local charset='A-Za-z0-9'
+  local others=()
+
+  for arg in "$@"
+  do
+    case $arg in
+      -s|--symbols)
+      charset+='!#$%&()*+,-./:;<=>?@[]^_`{|}~'
+      shift
+      ;;
+      *)
+      others+=("$1")
+      shift
+      ;;
+    esac
+  done
+  
+  local character_count=${others[1]:-32}
+  head /dev/urandom | LC_ALL=C tr -dc ${charset} | fold -w ${character_count} | head -1
 }
 
 # Colorized diff 
