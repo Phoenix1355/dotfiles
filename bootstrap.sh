@@ -36,7 +36,7 @@ touch ~/.hushlogin
 ###################
 ##     UTILS     ##
 ###################
-brew install coreutils wget curl tree git openssl node gcc python pngquant rename fzf
+brew install coreutils wget curl tree git openssl node nvm gcc python pngquant rename fzf
 
 ###################
 ##     TOOLS     ##

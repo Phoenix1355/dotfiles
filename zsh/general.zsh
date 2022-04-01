@@ -30,4 +30,7 @@ ZSH_THEME="robbyrussell"
 
 DEFAULT_USER=`whoami`
 
+# rbenv setup
+eval "$(rbenv init -)"
+
 source $ZSH/oh-my-zsh.sh

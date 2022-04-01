@@ -11,6 +11,15 @@ function ssh-key-info {
   ssh-keygen -l -f "$HOME/.ssh/${1:-id_rsa}"
 }
 
+function ssh-key-new {
+  ssh-keygen -t rsa -b 4096 -f "$HOME/.ssh/${1:-id_rsa}" -C "${2:-$(whoami)@$(hostname)}"
+}
+
+function ssh-key-copy {
+  pbcopy < "$HOME/.ssh/${1:-id_rsa}.pub"
+  echo "Public '${1:-id_rsa}' key copied to clipboard"
+}
+
 ### Tools
 # Xcode via @orta
 openx(){
@@ -84,4 +93,13 @@ function mkd() {
 # Prints result of 10 shell loads for testing load speed
 function zshspeedtest() {
   for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done;
+}
+
+# Temporary alias for loading NVM when it's about to be used
+nvm() {
+  echo "🚨 NVM not loaded! Loading now..."
+  unset -f nvm
+  export NVM_PREFIX=$(brew --prefix nvm)
+  [ -s "$NVM_PREFIX/nvm.sh" ] && . "$NVM_PREFIX/nvm.sh"
+  nvm "$@"
 }
