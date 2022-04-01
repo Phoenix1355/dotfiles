@@ -23,6 +23,12 @@ alias dotrun="dotnet run"
 # List all TCP processes
 alias tcplist="lsof -i -P -n | grep LISTEN"
 
+# Ensure python is python3
+alias python="python3"
+
+# Open simulator directly from terminal
+alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
+
 ### FUN
 alias please="sudo"
 

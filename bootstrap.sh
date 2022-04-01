@@ -28,6 +28,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions \
 
 ## Oh-my-zsh - Linking config
 ln -s $DOTFILES_DIR/zshrc.zsh ~/.zshrc
+ln -s $DOTFILES_DIR/zshenv.zsh ~/.zshenv
 
 ## Silence last login
 touch ~/.hushlogin

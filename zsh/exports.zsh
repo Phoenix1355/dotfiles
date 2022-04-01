@@ -1,14 +1,23 @@
 ## Exports
 
 # Android SDK Environment Variables
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_SDK=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK/emulator
+export PATH=$PATH:$ANDROID_SDK/tools
+export PATH=$PATH:$ANDROID_SDK/tools/bin
+export PATH=$PATH:$ANDROID_SDK/platform-tools
 
-# Dotnet SDK
-# export MSBuildSDKsPath=/usr/local/share/dotnet/sdk/3.0.100/Sdks
+# Python Binaries
+export PATH=$PATH:$HOME/Library/Python/3.9/bin
+export PATH=$PATH:$HOME/Library/Python/2.7/bin
+export PATH=$PATH:$HOME/.local/bin
+
+# Mono Binaries
+export PATH=$PATH:/Library/Frameworks/Mono.framework/Versions/Current/bin
+
+# Node Version Manager
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # Golang development
 export GOPATH=${HOME}/.go
@@ -24,3 +33,9 @@ export SDKMAN_DIR="/Users/christian/.sdkman"
 export PATH=$HOME/.esp/xtensa-esp32-elf/bin:$PATH
 export ADF_PATH=$HOME/.esp/esp-adf
 export IDF_PATH=$ADF_PATH/esp-idf
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0_131)
+
+# Dart
+export PATH=$PATH:$HOME/.pub-cache/bin
