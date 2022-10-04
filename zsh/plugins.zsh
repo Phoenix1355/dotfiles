@@ -8,12 +8,10 @@
 plugins=(
   git
   git-flow
-  brew
-  osx
+  macos
   sudo
   bundler
   dotenv
   zsh-autosuggestions
   fast-syntax-highlighting
-  kubectl
 )

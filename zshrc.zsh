@@ -3,7 +3,7 @@
 ################################
 
 # Profiler
-# zmodload zsh/zprof
+zmodload zsh/zprof
 
 ### Initial
 # Path to your oh-my-zsh installation.
@@ -20,6 +20,14 @@ ZSH_CONFIG_DIR="$(dirname $(readlink $HOME/.zshrc))/zsh"
 
 . $ZSH_CONFIG_DIR/plugins.zsh
 . $ZSH_CONFIG_DIR/utils.zsh
+
+# Fix CompInit load time
+autoload -Uz compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
 
 ### Final source
 source "$ZSH/oh-my-zsh.sh"
