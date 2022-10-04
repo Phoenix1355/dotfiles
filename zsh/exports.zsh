@@ -47,3 +47,6 @@ export LANG=en_US.UTF-8
 
 # Ruby
 export PATH=$PATH:~/.rbenv/shims
+
+# Monogame
+export MGFXC_WINE_PATH=$HOME/.winemonogame
