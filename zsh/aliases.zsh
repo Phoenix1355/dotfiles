@@ -29,5 +29,9 @@ alias python="python3"
 # Open simulator directly from terminal
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
 
+# Command history
+alias h="history -10" # Last 10 commands
+alias hs"history | grep" # Search history
+
 ### FUN
 alias please="sudo"
