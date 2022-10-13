@@ -35,3 +35,19 @@ alias hs"history | grep" # Search history
 
 ### FUN
 alias please="sudo"
+
+# Git
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add ."
+alias gc="git commit -m"
+alias gca="git commit -a -m"
+alias gcm="git commit -m"
+alias gcam="git commit -a -m"
+alias gco="git checkout"
+alias gcb="git checkout -b"
+alias gcm="git checkout master"
+alias gcl="git clone"
+alias gpl="git pull"
+alias gps="git push"
