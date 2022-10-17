@@ -51,3 +51,6 @@ alias gcm="git checkout master"
 alias gcl="git clone"
 alias gpl="git pull"
 alias gps="git push"
+
+### Work related
+alias clearpwdpolicies='sudo pwolicy -clearaccountpolicies'

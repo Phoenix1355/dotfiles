@@ -85,11 +85,6 @@ function diff {
   return ${pipestatus[1]}
 }
 
-# Create directory and enter
-function mkd() {
-  mkdir -p "$@" && cd "$_";
-}
-
 # Prints result of 10 shell loads for testing load speed
 function zshspeedtest() {
   for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done;
@@ -103,3 +98,8 @@ nvm() {
   [ -s "$NVM_PREFIX/nvm.sh" ] && . "$NVM_PREFIX/nvm.sh"
   nvm "$@"
 }
+
+# Make dir and cd into it with 'take' or just 'tk'. To be used with 'touch' for
+# creating files and directories.
+function take() { mkdir -p $1; cd $1; }
+alias tk='take'
