@@ -15,24 +15,9 @@ export PATH=$PATH:$HOME/.local/bin
 # Mono Binaries
 export PATH=$PATH:/Library/Frameworks/Mono.framework/Versions/Current/bin
 
-# Node Version Manager
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
 # Golang development
-export GOPATH=${HOME}/.go
-export GOROOT=$(brew --prefix golang)/libexec
+export GOPATH=$HOME/.go
 export PATH=$PATH:${GOPATH}/bin:${GOROOT}/bin
-
-# Java SDKman
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/christian/.sdkman"
-[[ -s "/Users/christian/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/christian/.sdkman/bin/sdkman-init.sh"
-
-# ESP
-export PATH=$HOME/.esp/xtensa-esp32-elf/bin:$PATH
-export ADF_PATH=$HOME/.esp/esp-adf
-export IDF_PATH=$ADF_PATH/esp-idf
 
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0_131)

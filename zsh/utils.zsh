@@ -90,16 +90,39 @@ function zshspeedtest() {
   for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done;
 }
 
-# Temporary alias for loading NVM when it's about to be used
-nvm() {
-  echo "🚨 NVM not loaded! Loading now..."
-  unset -f nvm
-  export NVM_PREFIX=$(brew --prefix nvm)
-  [ -s "$NVM_PREFIX/nvm.sh" ] && . "$NVM_PREFIX/nvm.sh"
-  nvm "$@"
-}
-
 # Make dir and cd into it with 'take' or just 'tk'. To be used with 'touch' for
 # creating files and directories.
 function take() { mkdir -p $1; cd $1; }
 alias tk='take'
+
+# Temporary alias for loading NVM when it's about to be used
+lazynvm() {
+  unset -f nvm node npm
+  export NVM_DIR=$HOME/.nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+}
+
+nvm() {
+  lazynvm
+  nvm "$@"
+}
+
+node() {
+  lazynvm
+  node "$@"
+}
+
+npm() {
+  lazynvm
+  npm "$@"
+}
+
+# SDK Man
+sdk() {
+  export SDKMAN_DIR="$HOME/.sdkman"
+  if [[ "$(which sdk | wc -l)" -le 10 ]]; then
+    unset -f sdk
+    source "$SDKMAN_DIR/bin/sdkman-init.sh"
+  fi
+  sdk "$@"
+}
