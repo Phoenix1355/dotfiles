@@ -19,8 +19,6 @@ bindkey '^[end' end-of-line
 zmodload zsh/mathfunc
 
 ### ZSH Config
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -29,8 +27,3 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 DEFAULT_USER=`whoami`
-
-# rbenv setup
-eval "$(rbenv init -)"
-
-source $ZSH/oh-my-zsh.sh
